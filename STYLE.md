@@ -56,16 +56,16 @@ on a single screen.
 
 | Token | Hex | Name | Pair with |
 |---|---|---|---|
-| `--cone` | `#E64E2E` | Cone Orange (brand accent) | Traffic cone lamp, sale tags |
-| `--mustard` | `#F8A512` | Mustard | Pen lamp, highlights |
-| `--cobalt` | `#0A5AC9` | Cobalt | Links, button hover |
-| `--lime` | `#D2F37F` | Lime | "New drop" sections |
-| `--sky` | `#63A4FF` | Sky | Rubik's table, info blocks |
-| `--lilac` | `#CEAFFF` | Lilac | Soft backdrops |
-| `--bubblegum` | `#FF419D` | Bubblegum | Badges, stickers (small doses) |
+| `--cone` | `#FF4D00` | Cone Orange (brand accent) | Traffic cone lamp, sale tags |
+| `--mustard` | `#FFD60A` | Mustard | Pen lamp, highlights |
+| `--cobalt` | `#2F5BFF` | Cobalt | Links, button hover |
+| `--lime` | `#C8FF00` | Lime | "New drop" sections |
+| `--sky` | `#38C6FF` | Sky | Rubik's table, info blocks |
+| `--lilac` | `#B57BFF` | Lilac | Soft backdrops |
+| `--bubblegum` | `#FF2D95` | Bubblegum | Badges, stickers (small doses) |
 
 ### Rules
-- Text on any accent is `--ink`, except on `--cobalt` and `--cone`, where it is `--paper`.
+- Text on any accent is `--ink`, except on `--cobalt`, where it is `--paper`. The accents are neon-bright, so dark text keeps them readable.
 - Buttons are always `--ink` at rest. Accent color appears on hover only.
 - Full-bleed product sections may use an accent backdrop; product cards stay on `--surface`.
 - Name colors with personality when they're product variants (e.g. "Cone Orange",
@@ -181,7 +181,7 @@ for sticker-style badges only, not on everything.
 ### Badges ("stickers")
 - Pill, `--border`, Poppins 600 uppercase `0.6875rem`.
 - Slight rotation (`-4deg` to `4deg`) so they feel stuck on.
-- Variants: `NEW DROP` (`--lime`), `SALE` (`--cone`, white text),
+- Variants: `NEW DROP` (`--lime`), `SALE` (`--cone`, ink text),
   `SOLD OUT` (`--ink`, white text), `ONLY 3 LEFT` (`--mustard`),
   `SAY WHAT?!` (`--bubblegum`, for the strangest items).
 - Sold out always comes with a "Get notified" button, never a dead end.
@@ -265,13 +265,13 @@ no chill.
   --ink-soft: #424242;
   --surface: #F2F2F2;
   --line: #E6E6E6;
-  --cone: #E64E2E;
-  --mustard: #F8A512;
-  --cobalt: #0A5AC9;
-  --lime: #D2F37F;
-  --sky: #63A4FF;
-  --lilac: #CEAFFF;
-  --bubblegum: #FF419D;
+  --cone: #FF4D00;
+  --mustard: #FFD60A;
+  --cobalt: #2F5BFF;
+  --lime: #C8FF00;
+  --sky: #38C6FF;
+  --lilac: #B57BFF;
+  --bubblegum: #FF2D95;
 
   /* Type */
   --font-display: "Unbounded", "Arial Black", sans-serif;

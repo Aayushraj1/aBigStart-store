@@ -7,13 +7,13 @@
   --ink-soft: #424242;
   --surface: #F2F2F2;
   --line: #E6E6E6;
-  --cone: #E64E2E;
-  --mustard: #F8A512;
-  --cobalt: #0A5AC9;
-  --lime: #D2F37F;
-  --sky: #63A4FF;
-  --lilac: #CEAFFF;
-  --bubblegum: #FF419D;
+  --cone: #FF4D00;
+  --mustard: #FFD60A;
+  --cobalt: #2F5BFF;
+  --lime: #C8FF00;
+  --sky: #38C6FF;
+  --lilac: #B57BFF;
+  --bubblegum: #FF2D95;
 
   /* Type */
   --font-display: "Unbounded", "Arial Black", sans-serif;
@@ -142,8 +142,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .sticker:nth-child(even) { transform: rotate(3deg); }
 .sticker-lime { background: var(--lime); }
-.sticker-pink { background: var(--bubblegum); color: var(--paper); }
-.sticker-sale { background: var(--cone); color: var(--paper); }
+.sticker-pink { background: var(--bubblegum); color: var(--ink); }
+.sticker-sale { background: var(--cone); color: var(--ink); }
 .sticker-ink { background: var(--ink); color: var(--paper); }
 .sticker-mustard { background: var(--mustard); }
 
@@ -374,7 +374,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 /* ---------- Newsletter ---------- */
 
-.newsletter { background: var(--surface); }
+.newsletter { background: var(--mustard); }
 .newsletter-inner { display: grid; gap: var(--space-3); align-items: end; }
 @media (min-width: 1024px) { .newsletter-inner { grid-template-columns: 1.2fr 1fr; } }
 .newsletter-form { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -395,7 +395,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .footer-links a:hover { color: var(--lime); }
 .wordmark {
   font-family: var(--font-display); font-weight: 900; text-transform: uppercase;
-  font-size: clamp(3rem, 15.5vw, 15rem); letter-spacing: -0.05em; line-height: 0.85; white-space: nowrap;
+  font-size: clamp(2.5rem, 11.5vw, 11rem); letter-spacing: -0.05em; line-height: 0.85; white-space: nowrap;
 }
 .wordmark span { color: var(--cone); }
 .footer-legal { margin-top: var(--space-3); font-size: 0.8125rem; color: rgba(255, 255, 255, 0.6); }
@@ -466,12 +466,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
 /* ---------- Toast ---------- */
 
 .toast {
-  position: fixed; left: 50%; bottom: 24px; z-index: 80; transform: translate(-50%, 150%);
+  position: fixed; left: 50%; bottom: 24px; z-index: 80; transform: translate(-50%, calc(100% + 48px)); visibility: hidden;
   background: var(--ink); color: var(--paper); padding: 12px 20px; border-radius: var(--radius-pill);
   font-weight: 500; font-size: 0.9375rem; box-shadow: 4px 4px 0 var(--lime); max-width: calc(100% - 32px);
-  transition: transform var(--dur-base) var(--ease-out); pointer-events: none;
+  transition: transform var(--dur-base) var(--ease-out), visibility 0s linear var(--dur-base); pointer-events: none;
 }
-.toast.show { transform: translate(-50%, 0); }
+.toast.show { transform: translate(-50%, 0); visibility: visible; transition: transform var(--dur-base) var(--ease-out); }
 
 /* ---------- Scroll reveal ---------- */
 
