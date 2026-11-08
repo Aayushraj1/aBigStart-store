@@ -1,13 +1,25 @@
 # STYLE.md
 
-Style guide for the aBigStart website: a store for oversized, quirky home decor
-(a traffic cone lamp, a giant Rubik's Cube table, a 5 ft pen with a bulb inside).
+Style guide for **Say What**: a store for all kinds of unique, quirky home decor,
+the objects that make people say "say what?" (a traffic cone lamp, a giant Rubik's
+Cube table, a 5 ft pen with a bulb inside, and many more).
 
 **Audience:** Gen Z and Gen Alpha.
 **Direction:** Wrongroom's bold, shop-first energy, with Areaware's calm grid and
 spacing. The products are loud; the layout around them stays clean.
 
-> Brand name is not decided yet. `[Brand]` marks every place it goes.
+## 0. Brand
+
+| | |
+|---|---|
+| Name | **Say What** (written "Say What?" in the logo and headlines) |
+| Domain | saywhat.in (fallbacks: saywhat.co.in, saywhathome.com) |
+| Handle | @saywhat.in on every platform; @saywhathome if taken |
+| Tagline | "Decor that makes people say what." |
+| Idea | Every product should earn a "say what?" reaction. If it doesn't, it doesn't belong in the store. |
+
+Logo: "SAY WHAT?" in Unbounded 900, uppercase. The question mark can tilt or
+change color per section; it's the one element allowed to play.
 
 ---
 
@@ -111,7 +123,7 @@ Two fonts, both free on Google Fonts.
 - 12 columns, max content width `1320px`, side gutter `16px` on phones, `32px` on desktop.
 - Section padding: `--space-5` top and bottom on desktop, `--space-4` on phones.
 - Product grid: 4 columns desktop, 2 tablet, 1–2 phone (2 if cards stay readable).
-- Keep generous whitespace between sections. Oversized products need room.
+- Keep generous whitespace between sections. Statement products need room.
 
 ### Breakpoints
 
@@ -161,7 +173,8 @@ for sticker-style badges only, not on everything.
 - `--surface` background, `--radius-card`, image area `4:5` ratio.
 - Product photo on a solid accent backdrop inside the image area.
 - Below the image: name (Unbounded 700), one-line personality blurb (Poppins),
-  scale tag ("5 FT TALL" in `--text-label`), price, and color swatches.
+  a "say what" fact tag in `--text-label` (the one surprising detail: "5 FT TALL",
+  "IT'S A LAMP", "SEATS 4"), price, and color swatches.
 - **Swatches on the card.** Clicking one swaps the photo instantly, with no page reload.
 - Hover: card lifts with `--shadow-pop` and a `2px` ink border.
 
@@ -169,7 +182,8 @@ for sticker-style badges only, not on everything.
 - Pill, `--border`, Poppins 600 uppercase `0.6875rem`.
 - Slight rotation (`-4deg` to `4deg`) so they feel stuck on.
 - Variants: `NEW DROP` (`--lime`), `SALE` (`--cone`, white text),
-  `SOLD OUT` (`--ink`, white text), `ONLY 3 LEFT` (`--mustard`).
+  `SOLD OUT` (`--ink`, white text), `ONLY 3 LEFT` (`--mustard`),
+  `SAY WHAT?!` (`--bubblegum`, for the strangest items).
 - Sold out always comes with a "Get notified" button, never a dead end.
 
 ### Header
@@ -185,10 +199,11 @@ for sticker-style badges only, not on everything.
 - Left: large gallery (photos + one short looping video or 360° spin). Right: details.
 - Order: name, blurb, price, swatches, quantity, Add to cart, then
   dimensions, materials, delivery.
-- Always show a **scale image**: the product next to a person or in a real room.
+- Always show the **surprise**: a scale shot next to a person when size is the
+  twist, a before/after or "it opens!" shot when the function is the twist.
 
 ### Footer
-- `--ink` background, `--paper` text, large Unbounded wordmark across the bottom.
+- `--ink` background, `--paper` text, a giant "SAY WHAT?" wordmark across the bottom.
 - Newsletter signup with a cheeky line ("Get drops before your friends do").
 
 ---
@@ -197,7 +212,7 @@ for sticker-style badges only, not on everything.
 
 ### Photography
 - Hero shots: product centered on a single solid accent backdrop, soft studio light.
-- Lifestyle shots: real rooms, a person for scale, natural light.
+- Lifestyle shots: real rooms, natural light, a person when size is part of the surprise.
 - Short loops (3–6 s, muted, autoplay) on product pages and drop sections.
 - No busy props. The object is the only character in frame.
 
@@ -220,8 +235,11 @@ no chill.
 | "Boring corners are optional." | "Elevate your living space." |
 | "Only 3 left. Just saying." | "Limited stock available." |
 | "Get notified" | "Click here to subscribe to updates" |
+| "Say what? It's a table." | "Multi-functional furniture piece" |
 
 - Every product gets a name and one-line personality.
+- Use the brand phrase as a copy hook, not on every line: "Say what?",
+  "You heard us.", "Yes, really."
 - Headlines: 2–6 words. Body: 1–2 short sentences.
 - Emojis: rare, and never in headlines.
 
@@ -231,7 +249,7 @@ no chill.
 
 - Text contrast at least 4.5:1 (check light text on `--cone` and `--cobalt`).
 - Visible focus ring on everything clickable: `3px solid var(--cobalt)`, offset `3px`.
-- All product images need alt text that describes the object and its scale.
+- All product images need alt text that describes the object and what makes it unusual.
 - Tap targets at least `44px`.
 - Never use color alone to show state (sold out, selected swatch): add text or an icon.
 
@@ -296,17 +314,18 @@ no chill.
 
 Paste this into v0, Lovable, Bolt, or Claude Code along with this file:
 
-> Build a responsive, phone-first storefront for [Brand], a home decor brand selling
-> oversized, quirky objects for Gen Z: a traffic cone floor lamp, a giant Rubik's
-> Cube table, and a 5 ft pen with a light bulb inside. Follow STYLE.md exactly: white
-> and near-black base, one accent backdrop per section, Unbounded uppercase headlines
-> with tight tracking, Poppins body, pill buttons in ink that turn cobalt on hover
-> with a hard 6px offset shadow, product cards with color swatches that swap the
-> photo without reloading, sticker-style tilted badges, a scale tag on every product
-> ("5 FT TALL"), and short witty copy. Sections: announcement bar, sticky header,
-> hero, "Meet the lineup" product grid, "Why oversized?", how it works in 4 steps,
-> Instagram grid, newsletter, footer with a giant wordmark. Respect
-> prefers-reduced-motion.
+> Build a responsive, phone-first storefront for Say What, a home decor brand for
+> Gen Z selling all kinds of unique, quirky objects that make people say "say what?"
+> (for example a traffic cone floor lamp, a giant Rubik's Cube table, and a 5 ft pen
+> with a light bulb inside). Follow STYLE.md exactly: white and near-black base, one
+> accent backdrop per section, Unbounded uppercase headlines with tight tracking,
+> Poppins body, pill buttons in ink that turn cobalt on hover with a hard 6px offset
+> shadow, product cards with color swatches that swap the photo without reloading,
+> sticker-style tilted badges, a "say what" fact tag on every product ("5 FT TALL",
+> "IT'S A LAMP"), and short witty copy. Sections: announcement bar, sticky header
+> with a "SAY WHAT?" logo, hero, "Meet the lineup" product grid, shop by category,
+> "Say what?" section explaining the idea, how it works in 4 steps, Instagram grid,
+> newsletter, footer with a giant "SAY WHAT?" wordmark. Respect prefers-reduced-motion.
 
 ---
 
