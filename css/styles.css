@@ -161,18 +161,18 @@ button { font: inherit; color: inherit; cursor: pointer; }
   transition: box-shadow var(--dur-fast) var(--ease-out);
 }
 .header.scrolled { box-shadow: 0 10px 8px rgba(0, 0, 0, 0.04); }
-.header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: var(--space-3); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 77px; gap: var(--space-3); }
 
 .logo {
-  font-family: var(--font-display); font-weight: 900; font-size: 1.1875rem;
+  font-family: var(--font-display); font-weight: 900; font-size: 1.425rem;
   letter-spacing: -0.04em; text-decoration: none; white-space: nowrap;
 }
 .logo-q { display: inline-block; color: var(--cone); transform: rotate(12deg); transition: transform var(--dur-base) var(--ease-out); }
 .logo:hover .logo-q { transform: rotate(-12deg) scale(1.15); }
 
-.nav { display: flex; gap: 2rem; }
+.nav { display: flex; gap: 2.4rem; }
 .nav a {
-  font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
+  font-size: 0.975rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
   text-decoration: none; padding: 8px 0; border-bottom: 2px solid transparent;
 }
 .nav a:hover { border-bottom-color: var(--ink); }
@@ -180,22 +180,24 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .header-actions { display: flex; align-items: center; gap: 10px; }
 
 .cart-btn {
-  position: relative; width: 44px; height: 44px; border-radius: var(--radius-pill);
-  border: var(--border); background: var(--paper); display: inline-flex; align-items: center; justify-content: center;
-  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+  position: relative; width: 53px; height: 53px; border-radius: var(--radius-pill);
+  border: var(--border); background: var(--cone); color: var(--ink);
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: 3px 3px 0 var(--ink);
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), background-color var(--dur-fast);
 }
-.cart-btn:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--ink); }
+.cart-btn:hover { background: var(--lime); transform: translate(-2px, -2px) rotate(-6deg); box-shadow: 5px 5px 0 var(--ink); }
 .cart-count {
-  position: absolute; top: -6px; right: -6px; min-width: 22px; height: 22px; padding: 0 6px;
-  border-radius: var(--radius-pill); background: var(--cone); color: var(--paper);
-  font-size: 0.75rem; font-weight: 600; display: flex; align-items: center; justify-content: center;
+  position: absolute; top: -8px; right: -8px; min-width: 24px; height: 24px; padding: 0 6px;
+  border-radius: var(--radius-pill); background: var(--ink); color: var(--lime);
+  font-size: 0.8125rem; font-weight: 600; display: flex; align-items: center; justify-content: center;
   border: 2px solid var(--paper);
 }
 .cart-count.bump { animation: bump 400ms var(--ease-out); }
 @keyframes bump { 50% { transform: scale(1.35); } }
 
 .menu-btn {
-  display: none; width: 44px; height: 44px; border-radius: var(--radius-pill); border: var(--border);
+  display: none; width: 53px; height: 53px; border-radius: var(--radius-pill); border: var(--border);
   background: var(--paper); flex-direction: column; align-items: center; justify-content: center; gap: 6px;
 }
 .menu-btn span { width: 18px; height: 2px; background: var(--ink); transition: transform var(--dur-fast) var(--ease-out); }
