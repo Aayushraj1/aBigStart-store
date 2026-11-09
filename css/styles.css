@@ -60,6 +60,11 @@
 
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 
+/* Laptops and desktops: render at 80% so 100% browser zoom looks like 80% did */
+@media (min-width: 1024px) {
+  html { zoom: 0.8; }
+}
+
 body {
   margin: 0;
   background: var(--paper);
